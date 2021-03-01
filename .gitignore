@@ -1,0 +1,13 @@
+.idea
+.vscode
+/vendor/
+_book
+node_modules
+.DS_Store
+composer.lock
+cache
+!/src/Libraries/Cache
+/HikSDKCache/ISC
+Env.php
+cghooks.lock
+test.*
