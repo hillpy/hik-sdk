@@ -37,7 +37,7 @@ class Common
                     $paramArr[$key] = $newData[$key];
                 }
 
-            // 未传该字段情况下判断是否必填，若是，则获取默认值
+                // 未传该字段情况下判断是否必填，若是，则获取默认值
             } elseif (
                 isset($value['required']) &&
                 $value['required']
