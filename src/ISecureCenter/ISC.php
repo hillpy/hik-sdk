@@ -2,21 +2,22 @@
 
 namespace Hillpy\HikSDK\ISecureCenter;
 
-use Hillpy\HikSDK\ISecureCenter\Interfaces\DemoInterface;
-use Hillpy\HikSDK\ISecureCenter\Traits\DemoTrait;
+use Hillpy\HikSDK\ISecureCenter\Interfaces\FaceInterface;
+use Hillpy\HikSDK\ISecureCenter\Traits\FaceTrait;
 use Hillpy\HikSDK\Libraries\Cache\Cache;
 use Hillpy\HikSDK\Libraries\Common\Common;
 
 class ISC implements
-    DemoInterface
+    FaceInterface
 {
-    use DemoTrait;
+    use FaceTrait;
 
     // ISC实例
     private static $instance;
 
     // 配置选项
     private $options = [
+        'host' => '',
         'app_key' => '',
         'app_secret' => '',
         'cache_driver' => 'file',

@@ -49,5 +49,57 @@ class CommonTest extends TestCase
             ],
         ];
         var_dump(Common::handleParam($rawData, $newData));
+        $rawData = [
+          [
+            'a' => [
+              'default' => '',
+              'required' => false,
+              'value' => '',
+            ],
+            'b' => [
+              'default' => '',
+              'required' => false,
+              'value' => [
+                [
+                  'bb' => [
+                    'default' => '',
+                    'required' => false,
+                    'value' => '',
+                  ],
+                ]
+              ],
+            ],
+            'c' => [
+              'default' => 'ccc',
+              'required' => true,
+              'value' => '',
+            ]
+          ],
+        ];
+        $newData = [
+          [
+            'a' => 1,
+            'b' => [
+              [
+                'bb' => '2-1',
+              ],
+            ],
+          ],
+          [
+            'a' => 11,
+            'b' => '',
+            'c' => 33
+          ],
+          [
+            'a' => 111,
+            'b' => 222,
+            'c' => [
+              [
+                'cc' => '333-1'
+              ]
+            ],
+          ],
+        ];
+        var_dump(Common::handleParam($rawData, $newData));
     }
 }
