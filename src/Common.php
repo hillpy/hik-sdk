@@ -57,4 +57,31 @@ class Common
         }
         return $paramArr;
     }
+
+    public static function getSignature($appKey, $appSecret, $url = '')
+    {
+        $signatureStr = self::getSignatureStr($appKey, $url);
+        $signature = hash_hmac('sha256', $signatureStr, $appSecret, true);
+        return base64_encode($signature);
+    }
+
+    public static function getSignatureStr($appKey = '', $url = '/api/v1/oauth/token')
+    {
+        $br = "\n";
+        $httpMethod = 'POST';
+        $accept = '*/*';
+        $contentType = 'application/json;charset=UTF-8';
+        list($msecond, $second) = explode(' ', microtime());
+        $timestamp = (float)sprintf('%.0f', (floatval($msecond) + floatval($second)) * 1000);
+
+        $signatureStr = '';
+        $signatureStr .= $httpMethod . $br;
+        $signatureStr .= $accept . $br;
+        $signatureStr .= $contentType . $br;
+        $signatureStr .= "x-ca-key:$appKey$br";
+        $signatureStr .= "x-ca-timestamp:$timestamp$br";
+        $signatureStr .= $url;
+
+        return $signatureStr;
+    }
 }

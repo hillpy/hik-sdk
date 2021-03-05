@@ -10,8 +10,9 @@ trait BaseTrait
     public function getISCInstance()
     {
         $options = [
-            'app_key' => Env::$isc['app_key'],
-            'app_secret' => Env::$isc['app_secret'],
+            'host' => Env::$ISC['host'],
+            'app_key' => Env::$ISC['app_key'],
+            'app_secret' => Env::$ISC['app_secret'],
             'cache_driver' => 'redis',
         ];
 

@@ -4,7 +4,6 @@ namespace Hillpy\HikSDK\ISecureCenter;
 
 use Hillpy\HikSDK\ISecureCenter\Interfaces\FaceInterface;
 use Hillpy\HikSDK\ISecureCenter\Traits\FaceTrait;
-use Hillpy\HikSDK\Libraries\Cache\Cache;
 use Hillpy\HikSDK\Libraries\Common\Common;
 
 class ISC implements
@@ -31,12 +30,6 @@ class ISC implements
 
     // 接口调用凭证
     private $token;
-
-    // Cache类实例
-    private $cache;
-
-    // 缓存key的前缀
-    private $cacheKeyPrefix;
 
     public static function getInstance($options = [])
     {
@@ -66,36 +59,6 @@ class ISC implements
         ) {
             $this->options = Common::updateArrayData($this->options, $options);
         }
-
-        // 获取Cache类实例
-        $this->cache = $this->initCache();
-        // 解析缓存key的通用前缀
-        $this->cacheKeyPrefix = Common::parseStr(CacheKey::$prefix, ['app_key' => $this->options['app_key']]);
-    }
-
-    private function initCache()
-    {
-        $cacheOption = [
-            'driver' => $this->options['cache_driver'],
-            'prefix' => $this->options['cache_prefix'],
-            'key' => $this->options['cache_key'],
-            'expire' => $this->options['cache_expire'],
-            'file_base_path' => $this->options['cache_file_base_path'],
-            'file_path' => $this->options['cache_file_path'],
-            'file_ext' => $this->options['cache_file_ext'],
-        ];
-        return Cache::getInstance($cacheOption);
-    }
-
-    private function parseCacheKey($key = '', $varArr = [])
-    {
-        if (!$key) {
-            return $this->cacheKeyPrefix . $key;
-        }
-
-        $str = Common::parseStr($key, $varArr);
-
-        return $this->cacheKeyPrefix . $str;
     }
 
     public function setOptions($options = [])

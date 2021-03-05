@@ -29,7 +29,7 @@ class FaceParam
                 'value' => '',
             ],
         ],
-        'updateFace' => [
+        'deleteFace' => [
             'faceId' => [
                 'default' => '',
                 'required' => true,
