@@ -13,7 +13,7 @@ trait BaseTrait
             'host' => Env::$ISC['host'],
             'app_key' => Env::$ISC['app_key'],
             'app_secret' => Env::$ISC['app_secret'],
-            'cache_driver' => 'redis',
+            'cache_driver' => 'file',
         ];
 
         return ISC::getInstance($options);
@@ -22,7 +22,7 @@ trait BaseTrait
     public function getCacheInstance()
     {
         $option = [
-            'cache_driver' => 'redis',
+            'cache_driver' => 'file',
         ];
         return Cache::getInstance($option);
     }

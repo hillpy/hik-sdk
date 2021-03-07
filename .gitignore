@@ -7,7 +7,7 @@ node_modules
 composer.lock
 cache
 !/src/Libraries/Cache
-/HikSDKCache/ISC
+HikSDKCache
 Env.php
 cghooks.lock
 test.*

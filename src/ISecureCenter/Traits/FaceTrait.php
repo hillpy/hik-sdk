@@ -13,7 +13,7 @@ trait FaceTrait
     {
         $finalParamArr = Common::handleParam(FaceParam::$face[__FUNCTION__], $paramArr);
 
-        $url = $this->options['host'] . FaceConstant::ADD_SINGLE_FACE . http_build_query(['access_token' => $finalParamArr['access_token']]);
+        $url = $this->options['host'] . FaceConstant::ADD_SINGLE_FACE_PATH . http_build_query(['access_token' => $finalParamArr['access_token']]);
 
         return json_decode(Curl::httpRequest($url, $finalParamArr), true);
     }

@@ -58,14 +58,14 @@ class Common
         return $paramArr;
     }
 
-    public static function getSignature($appKey, $appSecret, $url = '')
+    public static function getSignatureData($appKey, $appSecret, $url)
     {
-        $signatureStr = self::getSignatureStr($appKey, $url);
-        $signature = hash_hmac('sha256', $signatureStr, $appSecret, true);
-        return base64_encode($signature);
+        $signatureStrData = self::getSignatureStrData($appKey, $url);
+        $signature = hash_hmac('sha256', $signatureStrData['signatureStr'], $appSecret, true);
+        return array_merge($signatureStrData, ['signature' => base64_encode($signature)]);
     }
 
-    public static function getSignatureStr($appKey = '', $url = '/api/v1/oauth/token')
+    public static function getSignatureStrData($appKey, $url)
     {
         $br = "\n";
         $httpMethod = 'POST';
@@ -82,6 +82,28 @@ class Common
         $signatureStr .= "x-ca-timestamp:$timestamp$br";
         $signatureStr .= $url;
 
-        return $signatureStr;
+        return [
+            'br' => $br,
+            'httpMethod' => $httpMethod,
+            'accept' => $accept,
+            'contentType' => $contentType,
+            'appKey' => $appKey,
+            'timestamp' => $timestamp,
+            'signatureStr' => $signatureStr,
+        ];
+    }
+
+    public static function getCurlOptions($data)
+    {
+        return [
+            CURLOPT_HTTPHEADER => [
+                'Accept:' . (isset($data['accept']) ? $data['accept'] : ''),
+                'Content-Type:' . (isset($data['contentType']) ? $data['contentType'] : ''),
+                'x-Ca-Key:' . (isset($data['appKey']) ? $data['appKey'] : ''),
+                'X-Ca-Signature:' . (isset($data['signature']) ? $data['signature'] : ''),
+                'X-Ca-Timestamp:' . (isset($data['timestamp']) ? $data['timestamp'] : ''),
+                'X-Ca-Signature-Headers:' . 'x-ca-key,x-ca-timestamp',
+            ]
+        ];
     }
 }
