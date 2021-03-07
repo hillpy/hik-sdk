@@ -1,6 +1,6 @@
 <?php
 
-namespace Hillpy\HikSDK\Tests\ISecureCenter;
+namespace Hillpy\HikSDK\Tests;
 
 class Env
 {

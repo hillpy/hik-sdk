@@ -4,6 +4,7 @@ namespace Hillpy\HikSDK\Tests\ISecureCenter;
 
 use Hillpy\HikSDK\ISecureCenter\ISC;
 use Hillpy\HikSDK\Libraries\Cache\Cache;
+use Hillpy\HikSDK\Tests\Env;
 
 trait BaseTrait
 {
