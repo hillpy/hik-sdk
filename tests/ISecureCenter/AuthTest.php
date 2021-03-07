@@ -11,5 +11,7 @@ class AuthTest extends TestCase
     public function testAuth()
     {
         $ISC = $this->getISCInstance();
+        echo PHP_EOL;
+        var_dump($ISC->getToken());
     }
 }
