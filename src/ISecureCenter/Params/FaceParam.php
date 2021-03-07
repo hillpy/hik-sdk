@@ -5,7 +5,7 @@ namespace Hillpy\HikSDK\ISecureCenter\Params;
 class FaceParam
 {
     public static $face = [
-        'addFace' => [
+        'addSingleFace' => [
             'personId' => [
                 'default' => '',
                 'required' => true,
@@ -17,7 +17,7 @@ class FaceParam
                 'value' => '',
             ],
         ],
-        'updateFace' => [
+        'updateSingleFace' => [
             'faceId' => [
                 'default' => '',
                 'required' => true,
@@ -29,7 +29,7 @@ class FaceParam
                 'value' => '',
             ],
         ],
-        'deleteFace' => [
+        'deleteSingleFace' => [
             'faceId' => [
                 'default' => '',
                 'required' => true,

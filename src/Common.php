@@ -65,12 +65,17 @@ class Common
         return array_merge($signatureStrData, ['signature' => base64_encode($signature)]);
     }
 
+    public static $br = "\n";
+    public static $httpMethod = 'POST';
+    public static $accept = '*/*';
+    public static $contentType = 'application/json;charset=UTF-8';
+
     public static function getSignatureStrData($appKey, $url)
     {
-        $br = "\n";
-        $httpMethod = 'POST';
-        $accept = '*/*';
-        $contentType = 'application/json;charset=UTF-8';
+        $br = self::$br;
+        $httpMethod = self::$httpMethod;
+        $accept = self::$accept;
+        $contentType = self::$contentType;
         list($msecond, $second) = explode(' ', microtime());
         $timestamp = (float)sprintf('%.0f', (floatval($msecond) + floatval($second)) * 1000);
 
@@ -103,7 +108,7 @@ class Common
                 'X-Ca-Signature:' . (isset($data['signature']) ? $data['signature'] : ''),
                 'X-Ca-Timestamp:' . (isset($data['timestamp']) ? $data['timestamp'] : ''),
                 'X-Ca-Signature-Headers:' . 'x-ca-key,x-ca-timestamp',
-            ]
+            ],
         ];
     }
 }

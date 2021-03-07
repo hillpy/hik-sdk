@@ -13,9 +13,12 @@ trait AuthTrait
     {
         $finalParamArr = Common::handleParam(AuthParam::$auth[__FUNCTION__], $paramArr);
 
-        $signatureData = Common::getSignatureData($this->options['app_key'], $this->options['app_secret'], AuthConstant::COMMON_PATH . AuthConstant::GET_ACCESS_TOKEN_PATH);
+        $urlPath = AuthConstant::COMMON_PATH . AuthConstant::GET_ACCESS_TOKEN_PATH;
 
-        $url = $this->options['host'] . AuthConstant::COMMON_PATH . AuthConstant::GET_ACCESS_TOKEN_PATH;
+        $url = $this->options['host'] . $urlPath;
+
+        $signatureData = Common::getSignatureData($this->options['app_key'], $this->options['app_secret'], $urlPath);
+
         return json_decode(Curl::httpRequest($signatureData['httpMethod'], $url, $finalParamArr, Common::getCurlOptions($signatureData)), true);
     }
 }

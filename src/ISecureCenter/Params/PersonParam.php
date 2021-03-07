@@ -4,7 +4,7 @@ namespace Hillpy\HikSDK\ISecureCenter\Params;
 
 class PersonParam
 {
-    public static $demo = [
+    public static $person = [
         'addSinglePerson' => [
             'personId' => [
                 'default' => '',
