@@ -23,7 +23,7 @@ class Cache implements CacheInterface
         'prefix' => 'cache_',
         'key' => 'cache',
         'expire' => 3600,
-        'file_base_path' => '',
+        'file_base_path' => '/',
         'file_path' => '/cache',
         'file_ext' => 'php',
         'host' => '127.0.0.1',
@@ -103,7 +103,6 @@ class Cache implements CacheInterface
         ) {
             $this->options = Common::updateArrayData($this->options, $options);
         }
-        $this->options['file_base_path'] || $this->options['file_base_path'] = $_SERVER['DOCUMENT_ROOT'];
         in_array($this->options['file_ext'], $this->allowFileExt) || $this->options['file_ext'] = 'php';
         in_array($this->options['driver'], $this->allowDriver) || $this->options['driver'] = 'file';
         $this->options['port'] || (isset($this->defaultPort[$this->options['driver']]) && $this->options['port'] = $this->defaultPort[$this->options['driver']]);
