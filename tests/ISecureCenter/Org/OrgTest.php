@@ -9,75 +9,75 @@ class PersonTest extends TestCase
 {
     use BaseTrait;
 
-    public function testAddSinglePerson()
+    public function testUpdateSingleOrg()
     {
         $ISC = $this->getISCInstance();
         echo PHP_EOL;
         $paramArr = [];
-        var_dump($ISC->addSinglePerson($paramArr));
+        var_dump($ISC->updateSingleOrg($paramArr));
     }
 
-    public function testAddBatchPerson()
+    public function testDeleteBatchOrg()
     {
         $ISC = $this->getISCInstance();
         echo PHP_EOL;
         $paramArr = [];
-        var_dump($ISC->addBatchPerson($paramArr));
+        var_dump($ISC->deleteBatchOrg($paramArr));
     }
 
-    public function testUpdateSinglePerson()
+    public function testAddBatchOrg()
     {
         $ISC = $this->getISCInstance();
         echo PHP_EOL;
         $paramArr = [];
-        var_dump($ISC->updateSinglePerson($paramArr));
+        var_dump($ISC->addBatchOrg($paramArr));
     }
 
-    public function testDeleteBatchPerson()
+    public function testGetRootOrg()
     {
         $ISC = $this->getISCInstance();
         echo PHP_EOL;
         $paramArr = [];
-        var_dump($ISC->deleteBatchPerson($paramArr));
+        var_dump($ISC->getRootOrg($paramArr));
     }
 
-    public function testGetOrgIndexCodePersonList()
+    public function testGetOrgList()
     {
         $ISC = $this->getISCInstance();
         echo PHP_EOL;
         $paramArr = [];
-        var_dump($ISC->getOrgIndexCodePersonList($paramArr));
+        var_dump($ISC->getOrgList($paramArr));
     }
 
-    public function testGetPersonList()
+    public function testGetAdvanceOrgList()
     {
         $ISC = $this->getISCInstance();
         echo PHP_EOL;
         $paramArr = [];
-        var_dump($ISC->getPersonList($paramArr));
+        var_dump($ISC->getAdvanceOrgList($paramArr));
     }
 
-    public function testGetAdvancePersonList()
+    public function testGetSubOrgListByParentOrgIndexCode()
     {
         $ISC = $this->getISCInstance();
         echo PHP_EOL;
         $paramArr = [];
-        var_dump($ISC->getAdvancePersonList($paramArr));
+        var_dump($ISC->getSubOrgListByParentOrgIndexCode($paramArr));
     }
 
-    public function testGetPersonInfoByCondition()
+    public function testGetOrgByTimeRange()
     {
         $ISC = $this->getISCInstance();
         echo PHP_EOL;
         $paramArr = [];
-        var_dump($ISC->getPersonInfoByCondition($paramArr));
+        var_dump($ISC->getOrgByTimeRange($paramArr));
     }
 
-    public function testGetPersonPicture()
+    public function testGetOrgInfoByOrgIndexCodes()
     {
         $ISC = $this->getISCInstance();
         echo PHP_EOL;
         $paramArr = [];
-        var_dump($ISC->getPersonPicture($paramArr));
+        var_dump($ISC->getOrgInfoByOrgIndexCodes($paramArr));
     }
 }

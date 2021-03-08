@@ -373,40 +373,23 @@ class PersonParam
                 ],
             ],
         ],
-        'getPersonInfoByCertificateNo' => [
-            'certificateNo' => [
+        'getPersonInfoByCondition' => [
+            'paramName' => [
                 'default' => '',
                 'required' => true,
-                'value' => '',
-            ],
-            'certificateType' => [
-                'default' => '',
-                'required' => false,
                 'value' => '',
                 'enum' => [
-                    111,
-                    414,
-                    113,
-                    335,
-                    131,
-                    133,
-                    990,
+                    'certificateNo',
+                    'personId',
+                    'phoneNo',
+                    'jobNo',
                 ],
             ],
-        ],
-        'getPersonInfoByPersonId' => [
-            'personId' => [
+            'paramValue' => [
                 'default' => '',
-                'required' => true,
+                'require' => true,
                 'value' => '',
-            ],
-        ],
-        'getPersonInfoByPhoneNo' => [
-            'phoneNo' => [
-                'default' => '',
-                'required' => true,
-                'value' => '',
-            ],
+            ]
         ],
         'getPersonPicture' => [
             'picUri' => [
@@ -420,5 +403,27 @@ class PersonParam
                 'value' => '',
             ],
         ],
+        'getPersonListByTimeRange' => [
+            'startTime' => [
+                'default' => '',
+                'required' => true,
+                'value' => '',
+            ],
+            'endTime' => [
+                'default' => '',
+                'required' => false,
+                'value' => '',
+            ],
+            'pageNo' => [
+                'default' => '',
+                'required' => true,
+                'value' => '',
+            ],
+            'pageSize' => [
+                'default' => '',
+                'required' => true,
+                'value' => '',
+            ],
+        ]
     ];
 }

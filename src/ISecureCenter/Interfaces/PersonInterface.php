@@ -11,8 +11,7 @@ interface PersonInterface
     public function getOrgIndexCodePersonList();
     public function getPersonList();
     public function getAdvancePersonList();
-    public function getPersonInfoByCertificateNo();
-    public function getPersonInfoByPersonId();
-    public function getPersonInfoByPhoneNo();
+    public function getPersonInfoByCondition();
     public function getPersonPicture();
+    public function getPersonListByTimeRange();
 }

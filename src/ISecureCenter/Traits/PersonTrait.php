@@ -71,29 +71,11 @@ trait PersonTrait
         return $this->handleRequest($urlPath, $finalParamArr);
     }
 
-    public function getPersonInfoByCertificateNo($paramArr = [])
+    public function getPersonInfoByCondition($paramArr = [])
     {
         $finalParamArr = Common::handleParam(PersonParam::$person[__FUNCTION__], $paramArr);
 
-        $urlPath = PersonConstant::COMMON_PATH . PersonConstant::GET_PERSON_INFO_BY_CERTIFICATE_NO_PATH;
-
-        return $this->handleRequest($urlPath, $finalParamArr);
-    }
-
-    public function getPersonInfoByPersonId($paramArr = [])
-    {
-        $finalParamArr = Common::handleParam(PersonParam::$person[__FUNCTION__], $paramArr);
-
-        $urlPath = PersonConstant::COMMON_PATH . PersonConstant::GET_PERSON_INFO_BY_PERSON_ID_PATH;
-
-        return $this->handleRequest($urlPath, $finalParamArr);
-    }
-
-    public function getPersonInfoByPhoneNo($paramArr = [])
-    {
-        $finalParamArr = Common::handleParam(PersonParam::$person[__FUNCTION__], $paramArr);
-
-        $urlPath = PersonConstant::COMMON_PATH . PersonConstant::GET_PERSON_INFO_BY_PHONE_NO_PATH;
+        $urlPath = PersonConstant::COMMON_PATH . PersonConstant::GET_PERSON_INFO_BY_CONDITION_PATH;
 
         return $this->handleRequest($urlPath, $finalParamArr);
     }
@@ -103,6 +85,15 @@ trait PersonTrait
         $finalParamArr = Common::handleParam(PersonParam::$person[__FUNCTION__], $paramArr);
 
         $urlPath = PersonConstant::COMMON_PATH . PersonConstant::GET_PERSON_PICTURE_PATH;
+
+        return $this->handleRequest($urlPath, $finalParamArr);
+    }
+
+    public function getPersonListByTimeRange($paramArr = [])
+    {
+        $finalParamArr = Common::handleParam(PersonParam::$person[__FUNCTION__], $paramArr);
+
+        $urlPath = PersonConstant::COMMON_PATH . PersonConstant::GET_PERSON_LIST_BY_TIME_RANGE_PATH;
 
         return $this->handleRequest($urlPath, $finalParamArr);
     }
