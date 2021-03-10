@@ -369,7 +369,7 @@ class PersonParam
                             'required' => true,
                             'value' => '',
                         ],
-                    ]
+                    ],
                 ],
             ],
         ],
