@@ -190,6 +190,7 @@ trait FileTrait
             ($contentArr['expire'] > 0 && time() >= ($contentArr['expire'] + $contentArr['time']))
         ) {
             file_exists($filename) && unlink($filename);
+            return $res;
         }
 
         if (
