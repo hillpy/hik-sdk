@@ -8,8 +8,6 @@ use Hillpy\HikSDK\ISecureCenter\Params\ResourceParam;
 
 trait ResourceTrait
 {
-    use BaseTrait;
-
     public function getResourcesByParams($paramArr = [])
     {
         $finalParamArr = Common::handleParam(ResourceParam::$resource[__FUNCTION__], $paramArr);
@@ -50,7 +48,7 @@ trait ResourceTrait
     {
         $finalParamArr = Common::handleParam(ResourceParam::$resource[__FUNCTION__], $paramArr);
 
-        $urlPath = ResourceConstant::COMMON_PATH . ResourceConstant::GET_RESOURCE_INFO;
+        $urlPath = ResourceConstant::COMMON_PATH . ResourceConstant::GET_RESOURCE_INFO_PATH;
 
         return $this->handleRequest($urlPath, $finalParamArr);
     }

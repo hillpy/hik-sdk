@@ -10,6 +10,7 @@ use Hillpy\HikSDK\ISecureCenter\Interfaces\PersonInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\RegionInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\ResourceInterface;
 use Hillpy\HikSDK\ISecureCenter\Traits\AuthTrait;
+use Hillpy\HikSDK\ISecureCenter\Traits\BaseTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\FaceTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\OrgTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\PersonTrait;
@@ -27,6 +28,7 @@ class ISC implements
     ResourceInterface
 {
     use AuthTrait,
+        BaseTrait,
         FaceTrait,
         OrgTrait,
         PersonTrait,

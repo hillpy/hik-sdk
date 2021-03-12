@@ -8,8 +8,6 @@ use Hillpy\HikSDK\ISecureCenter\Params\RegionParam;
 
 trait RegionTrait
 {
-    use BaseTrait;
-
     public function getRootRegions($paramArr = [])
     {
         $finalParamArr = Common::handleParam(RegionParam::$region[__FUNCTION__], $paramArr);

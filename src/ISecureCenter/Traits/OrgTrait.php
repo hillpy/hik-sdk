@@ -8,8 +8,6 @@ use Hillpy\HikSDK\ISecureCenter\Params\OrgParam;
 
 trait OrgTrait
 {
-    use BaseTrait;
-
     public function updateSingleOrg($paramArr = [])
     {
         $finalParamArr = Common::handleParam(OrgParam::$org[__FUNCTION__], $paramArr);

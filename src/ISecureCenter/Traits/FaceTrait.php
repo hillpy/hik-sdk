@@ -8,8 +8,6 @@ use Hillpy\HikSDK\ISecureCenter\Params\FaceParam;
 
 trait FaceTrait
 {
-    use BaseTrait;
-
     public function addSingleFace($paramArr = [])
     {
         $finalParamArr = Common::handleParam(FaceParam::$face[__FUNCTION__], $paramArr);
