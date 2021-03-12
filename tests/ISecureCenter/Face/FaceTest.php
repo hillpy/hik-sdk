@@ -32,4 +32,12 @@ class FaceTest extends TestCase
         $paramArr = [];
         var_dump($ISC->deleteSingleFace($paramArr));
     }
+
+    public function testCheckFacePicture()
+    {
+        $ISC = $this->getISCInstance();
+        echo PHP_EOL;
+        $paramArr = [];
+        var_dump($ISC->checkFacePicture($paramArr));
+    }
 }

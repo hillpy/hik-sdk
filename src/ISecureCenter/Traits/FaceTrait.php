@@ -34,4 +34,13 @@ trait FaceTrait
 
         return $this->handleRequest($urlPath, $finalParamArr);
     }
+
+    public function checkFacePicture($paramArr = [])
+    {
+        $finalParamArr = Common::handleParam(FaceParam::$face[__FUNCTION__], $paramArr);
+
+        $urlPath = FaceConstant::COMMON_PATH . FaceConstant::CHECK_FACE_PICTURE_PATH;
+
+        return $this->handleRequest($urlPath, $finalParamArr);
+    }
 }

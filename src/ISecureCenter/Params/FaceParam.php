@@ -36,5 +36,17 @@ class FaceParam
                 'value' => '',
             ],
         ],
+        'checkFacePicture' => [
+            'facePicBinaryData' => [
+                'default' => '',
+                'required' => false,
+                'value' => '',
+            ],
+            'facePicUrl' => [
+                'default' => '',
+                'required' => false,
+                'value' => '',
+            ],
+        ],
     ];
 }
