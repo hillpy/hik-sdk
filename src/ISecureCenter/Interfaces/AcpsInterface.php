@@ -19,6 +19,7 @@ interface AcpsInterface
     public function getAuthDownloadTaskList();
     public function deleteAuthDownloadTask();
     public function stopAuthDownloadTask();
+    public function getAuthDownloadTask();
     public function getChannelDownloadRecordList();
     public function getChannelDownloadRecordTotal();
     public function getDownloadRecordPersonDetail();

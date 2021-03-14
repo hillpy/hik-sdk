@@ -143,6 +143,15 @@ trait AcpsTrait
         return $this->handleRequest($urlPath, $finalParamArr);
     }
 
+    public function getAuthDownloadTask($paramArr = [])
+    {
+        $finalParamArr = Common::handleParam(AcpsParam::$acps[__FUNCTION__], $paramArr);
+
+        $urlPath = AcpsConstant::COMMON_PATH . AcpsConstant::GEt_AUTH_DOWNLOAD_TASK_PATH;
+
+        return $this->handleRequest($urlPath, $finalParamArr);
+    }
+
     public function getChannelDownloadRecordList($paramArr = [])
     {
         $finalParamArr = Common::handleParam(AcpsParam::$acps[__FUNCTION__], $paramArr);

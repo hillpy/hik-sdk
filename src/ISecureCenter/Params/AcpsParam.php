@@ -412,6 +412,7 @@ class AcpsParam
         'getAuthDownloadTaskList' => [],
         'deleteAuthDownloadTask' => [],
         'stopAuthDownloadTask' => [],
+        'getAuthDownloadTask' => [],
         'getChannelDownloadRecordList' => [],
         'getChannelDownloadRecordTotal' => [],
         'getDownloadRecordPersonDetail' => [],
