@@ -3,12 +3,14 @@
 namespace Hillpy\HikSDK\ISecureCenter;
 
 use Hillpy\HikSDK\CacheKey;
+use Hillpy\HikSDK\ISecureCenter\Interfaces\AcpsInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\AuthInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\FaceInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\OrgInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\PersonInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\RegionInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\ResourceInterface;
+use Hillpy\HikSDK\ISecureCenter\Traits\AcpsTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\AuthTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\BaseTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\FaceTrait;
@@ -20,6 +22,7 @@ use Hillpy\HikSDK\Libraries\Cache\Cache;
 use Hillpy\HikSDK\Libraries\Common\Common;
 
 class ISC implements
+    AcpsInterface,
     AuthInterface,
     FaceInterface,
     OrgInterface,
@@ -27,7 +30,8 @@ class ISC implements
     RegionInterface,
     ResourceInterface
 {
-    use AuthTrait,
+    use AcpsTrait,
+        AuthTrait,
         BaseTrait,
         FaceTrait,
         OrgTrait,

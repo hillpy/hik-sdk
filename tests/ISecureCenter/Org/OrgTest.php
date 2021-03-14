@@ -1,6 +1,6 @@
 <?php
 
-namespace Hillpy\HikSDK\Tests\ISecureCenter\Person;
+namespace Hillpy\HikSDK\Tests\ISecureCenter\Org;
 
 use Hillpy\HikSDK\Tests\ISecureCenter\BaseTrait;
 use PHPUnit\Framework\TestCase;

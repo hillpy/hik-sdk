@@ -6,8 +6,8 @@ class Common
 {
     public static function handleParam($rawData, $newData)
     {
-        if (!is_array($rawData) || count($rawData) <= 0) {
-            return [];
+        if (!$rawData || !is_array($rawData) || count($rawData) <= 0) {
+            return $newData;
         }
         $paramArr = [];
         foreach ($rawData as $key => $value) {
