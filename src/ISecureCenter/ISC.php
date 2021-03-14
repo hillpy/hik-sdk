@@ -172,7 +172,7 @@ class ISC implements
                 $tokenType = isset($res['data']['token_type']) ? $res['data']['token_type'] : '';
                 $expiresIn = isset($res['data']['expires_in']) ? $res['data']['expires_in'] : '';
                 // 缓存token
-                $this->cache->set($accessTokenCacheKey, $accessToken, $expiresIn - 5);
+                $this->cache->set($accessTokenCacheKey, $accessToken, intval($expiresIn) - 10);
             }
         }
 
