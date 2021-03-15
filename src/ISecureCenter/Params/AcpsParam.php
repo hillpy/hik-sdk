@@ -346,9 +346,7 @@ class AcpsParam
                 ],
             ],
             'resourceInfos' => [
-                'default' => '',
-                'required' => true,
-                'value' => [
+                [
                     'resourceIndexCode' => [
                         'default' => '',
                         'required' => true,
