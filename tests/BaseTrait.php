@@ -1,10 +1,10 @@
 <?php
 
-namespace Hillpy\HikSDK\Tests\ISecureCenter;
+namespace Hillpy\HikSDK\Tests;
 
+use Hillpy\HikSDK\InfovisionIoT\IIOT;
 use Hillpy\HikSDK\ISecureCenter\ISC;
 use Hillpy\HikSDK\Libraries\Cache\Cache;
-use Hillpy\HikSDK\Tests\Env;
 
 trait BaseTrait
 {
@@ -18,6 +18,18 @@ trait BaseTrait
         ];
 
         return ISC::getInstance($options);
+    }
+
+    public function getIIOTInstance()
+    {
+        $options = [
+            'host' => Env::$IIOT['host'],
+            'app_key' => Env::$IIOT['app_key'],
+            'app_secret' => Env::$IIOT['app_secret'],
+            'cache_driver' => 'file',
+        ];
+
+        return IIOT::getInstance($options);
     }
 
     public function getCacheInstance()

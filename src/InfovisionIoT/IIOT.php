@@ -1,49 +1,29 @@
 <?php
 
-namespace Hillpy\HikSDK\ISecureCenter;
+namespace Hillpy\HikSDK\InfovisionIoT;
 
 use Hillpy\HikSDK\BaseTrait;
 use Hillpy\HikSDK\CacheKey;
-use Hillpy\HikSDK\ISecureCenter\Interfaces\AcpsInterface;
-use Hillpy\HikSDK\ISecureCenter\Interfaces\AuthInterface;
-use Hillpy\HikSDK\ISecureCenter\Interfaces\DoorInterface;
-use Hillpy\HikSDK\ISecureCenter\Interfaces\FaceInterface;
-use Hillpy\HikSDK\ISecureCenter\Interfaces\OrgInterface;
-use Hillpy\HikSDK\ISecureCenter\Interfaces\PersonInterface;
-use Hillpy\HikSDK\ISecureCenter\Interfaces\RegionInterface;
-use Hillpy\HikSDK\ISecureCenter\Interfaces\ResourceInterface;
-use Hillpy\HikSDK\ISecureCenter\Traits\AcpsTrait;
-use Hillpy\HikSDK\ISecureCenter\Traits\AuthTrait;
-use Hillpy\HikSDK\ISecureCenter\Traits\DoorTrait;
-use Hillpy\HikSDK\ISecureCenter\Traits\FaceTrait;
-use Hillpy\HikSDK\ISecureCenter\Traits\OrgTrait;
-use Hillpy\HikSDK\ISecureCenter\Traits\PersonTrait;
-use Hillpy\HikSDK\ISecureCenter\Traits\RegionTrait;
-use Hillpy\HikSDK\ISecureCenter\Traits\ResourceTrait;
+use Hillpy\HikSDK\InfovisionIoT\Interfaces\AuthInterface;
+use Hillpy\HikSDK\InfovisionIoT\Interfaces\CameraInterface;
+use Hillpy\HikSDK\InfovisionIoT\Interfaces\ResourceInterface;
+use Hillpy\HikSDK\InfovisionIoT\Traits\AuthTrait;
+use Hillpy\HikSDK\InfovisionIoT\Traits\CameraTrait;
+use Hillpy\HikSDK\InfovisionIoT\Traits\ResourceTrait;
 use Hillpy\HikSDK\Libraries\Cache\Cache;
 use Hillpy\HikSDK\Libraries\Common\Common;
 
-class ISC implements
-    AcpsInterface,
+class IIOT implements
     AuthInterface,
-    DoorInterface,
-    FaceInterface,
-    OrgInterface,
-    PersonInterface,
-    RegionInterface,
+    CameraInterface,
     ResourceInterface
 {
-    use AcpsTrait,
-        AuthTrait,
+    use AuthTrait,
         BaseTrait,
-        DoorTrait,
-        FaceTrait,
-        OrgTrait,
-        PersonTrait,
-        RegionTrait,
+        CameraTrait,
         ResourceTrait;
 
-    // ISC实例
+    // IIOT实例
     private static $instance;
 
     // 配置选项
@@ -52,11 +32,11 @@ class ISC implements
         'app_key' => '',
         'app_secret' => '',
         'cache_driver' => 'file',
-        'cache_prefix' => 'hik_sdk_isc_',
-        'cache_key' => 'hik_sdk_isecurecenter',
+        'cache_prefix' => 'hik_sdk_iiot_',
+        'cache_key' => 'hik_sdk_infovisioniot',
         'cache_expire' => 3600 * 24 * 7,
         'cache_file_base_path' => '',
-        'cache_file_path' => '/HikSDKCache/ISC',
+        'cache_file_path' => '/HikSDKCache/IIOT',
         'cache_file_ext' => 'php',
     ];
 
@@ -101,7 +81,7 @@ class ISC implements
         // 获取Cache类实例
         $this->cache = $this->initCache();
         // 解析缓存key的通用前缀
-        $this->cacheKeyPrefix = Common::parseStr(CacheKey::$prefix, ['platform' => 'isc', 'app_key' => $this->options['app_key']]);
+        $this->cacheKeyPrefix = Common::parseStr(CacheKey::$prefix, ['platform' => 'iiot', 'app_key' => $this->options['app_key']]);
         // 获取accessToken
         $this->token = $this->getAccessTokenWithCache();
     }

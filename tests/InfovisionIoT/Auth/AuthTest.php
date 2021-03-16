@@ -1,6 +1,6 @@
 <?php
 
-namespace Hillpy\HikSDK\Tests\ISecureCenter\Auth;
+namespace Hillpy\HikSDK\Tests\InfovisionIoT\Auth;
 
 use Hillpy\HikSDK\Tests\BaseTrait;
 use PHPUnit\Framework\TestCase;
@@ -11,8 +11,8 @@ class AuthTest extends TestCase
 
     public function testGetAccessTokenWithCache()
     {
-        $ISC = $this->getISCInstance();
+        $IIOT = $this->getIIOTInstance();
         echo PHP_EOL;
-        var_dump($ISC->getToken());
+        var_dump($IIOT->getToken());
     }
 }

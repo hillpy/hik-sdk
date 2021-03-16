@@ -1,8 +1,7 @@
 <?php
 
-namespace Hillpy\HikSDK\ISecureCenter\Traits;
+namespace Hillpy\HikSDK;
 
-use Hillpy\HikSDK\Common;
 use Hillpy\HikSDK\Libraries\Curl\Curl;
 
 trait BaseTrait

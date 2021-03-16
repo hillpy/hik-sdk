@@ -2,7 +2,7 @@
 
 namespace Hillpy\HikSDK\Tests\ISecureCenter\Person;
 
-use Hillpy\HikSDK\Tests\ISecureCenter\BaseTrait;
+use Hillpy\HikSDK\Tests\BaseTrait;
 use PHPUnit\Framework\TestCase;
 
 class PersonTest extends TestCase
