@@ -1,0 +1,186 @@
+<?php
+
+namespace Hillpy\HikSDK\ISecureCenter\Params;
+
+class EventParam
+{
+    public static $event = [
+        'subscribeEventByEventType' => [
+            'eventTypes' => [
+                'default' => '',
+                'required' => true,
+                'value' => '',
+            ],
+            'eventDest' => [
+                'default' => '',
+                'required' => true,
+                'value' => '',
+            ],
+            'subType' => [
+                'default' => 0,
+                'required' => false,
+                'value' => '',
+                'enum' => [
+                    0,
+                    1,
+                    2,
+                ],
+            ],
+            'eventTypes' => [
+                'default' => '',
+                'required' => false,
+                'value' => '',
+            ],
+        ],
+        'getSubscribeEvent' => [],
+        'getUnsubscribeEvent' => [
+            'eventTypes' => [
+                'default' => '',
+                'required' => true,
+                'value' => '',
+            ],
+        ],
+        'searchEvent' => [
+            'eventRuleId' => [
+                'default' => '',
+                'required' => false,
+                'value' => '',
+            ],
+            'ability' => [
+                'default' => '',
+                'required' => false,
+                'value' => '',
+                'enum' => [
+                    'vms',
+                    'scpms',
+                    'acs',
+                    'pms',
+                    'mpc',
+                    'vis',
+                    'mss',
+                    'ecs',
+                    'pems',
+                    'frs',
+                    'fpms',
+                    'escpms',
+                ],
+            ],
+            'regionIndexCode' => [
+                'default' => '',
+                'required' => false,
+                'value' => '',
+            ],
+            'locationIndexCodes' => [
+                'default' => '',
+                'required' => false,
+                'value' => '',
+            ],
+            'resName' => [
+                'default' => '',
+                'required' => false,
+                'value' => '',
+            ],
+            'resIndexCodes' => [
+                'default' => '',
+                'required' => false,
+                'value' => '',
+            ],
+            'resTypes' => [
+                'default' => '',
+                'required' => false,
+                'value' => '',
+            ],
+            'eventType' => [
+                'default' => '',
+                'required' => false,
+                'value' => '',
+                'enum' => [
+                    '131329',
+                    '131330',
+                    '131331',
+                    '131612',
+                    '131613',
+                    '589825',
+                    '196355',
+                    '851969',
+                    '131588',
+                    '131585',
+                    '131586',
+                    '131587',
+                    '131590',
+                    '131593',
+                    '131592',
+                    '131591',
+                    '131594',
+                    '131595',
+                    '131664',
+                    '131665',
+                    '131596',
+                    '131603',
+                    '131605',
+                    '131597',
+                    '131610',
+                    '131608',
+                    '131666',
+                    '131667',
+                    '131609',
+                    '131598',
+                    '131599',
+                    '131600',
+                    '131601',
+                    '131602',
+                    '131604',
+                    '131606',
+                    '131607',
+                    '131611',
+                    '192518',
+                    '192517',
+                    '192516',
+                    '192515',
+                    '192514',
+                    '192513',
+                    '889196545',
+                ],
+            ],
+            'eventLevels' => [
+                'default' => '',
+                'required' => false,
+                'value' => '',
+            ],
+            'remark' => [
+                'default' => '',
+                'required' => false,
+                'value' => '',
+            ],
+            'handleStatus' => [
+                'default' => '',
+                'required' => false,
+                'value' => '',
+                'enum' => [
+                    0,
+                    1,
+                ],
+            ],
+            'startTime' => [
+                'default' => '',
+                'required' => true,
+                'value' => '',
+            ],
+            'endTime' => [
+                'default' => '',
+                'required' => true,
+                'value' => '',
+            ],
+            'pageSize' => [
+                'default' => '',
+                'required' => true,
+                'value' => '',
+            ],
+            'pageNo' => [
+                'default' => '',
+                'required' => true,
+                'value' => '',
+            ],
+        ],
+    ];
+}
