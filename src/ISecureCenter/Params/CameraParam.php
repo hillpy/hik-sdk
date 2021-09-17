@@ -1,6 +1,6 @@
 <?php
 
-namespace Hillpy\HikSDK\InfovisionIoT\Params;
+namespace Hillpy\HikSDK\ISecureCenter\Params;
 
 class CameraParam
 {
@@ -18,16 +18,19 @@ class CameraParam
                 'enum' => [
                     0,
                     1,
+                    2,
                 ],
             ],
             'protocol' => [
-                'default' => 'rtsp',
+                'default' => 'hik',
                 'required' => false,
                 'value' => '',
                 'enum' => [
+                    'hik',
                     'rtsp',
                     'rtmp',
                     'hls',
+                    'ws',
                 ],
             ],
             'transmode' => [
@@ -44,12 +47,51 @@ class CameraParam
                 'required' => false,
                 'value' => '',
             ],
+            'streamform' => [
+                'default' => 'rtp',
+                'required' => false,
+                'value' => '',
+                'enum' => [
+                    'ps',
+                    'rtp',
+                ],
+            ],
         ],
         'getCameraPlaybackURLs' => [
             'cameraIndexCode' => [
                 'default' => '',
                 'required' => true,
                 'value' => '',
+            ],
+            'recordLocation' => [
+                'default' => 0,
+                'required' => false,
+                'value' => '',
+                'enum' => [
+                    0,
+                    1,
+                ],
+            ],
+            'protocol' => [
+                'default' => 'hik',
+                'required' => false,
+                'value' => '',
+                'enum' => [
+                    'hik',
+                    'rtsp',
+                    'rtmp',
+                    'hls',
+                    'ws',
+                ],
+            ],
+            'transmode' => [
+                'default' => 1,
+                'required' => false,
+                'value' => '',
+                'enum' => [
+                    0,
+                    1,
+                ],
             ],
             'beginTime' => [
                 'default' => '',
@@ -61,34 +103,6 @@ class CameraParam
                 'required' => true,
                 'value' => '',
             ],
-            'recordLocation' => [
-                'default' => '0',
-                'required' => true,
-                'value' => '',
-                'enum' => [
-                    '0',
-                    '1',
-                ],
-            ],
-            'protocol' => [
-                'default' => 'rtsp',
-                'required' => false,
-                'value' => '',
-                'enum' => [
-                    'rtsp',
-                    'rtmp',
-                    'hls',
-                ],
-            ],
-            'needReturnClipInfo' => [
-                'default' => false,
-                'required' => false,
-                'value' => '',
-                'enum' => [
-                    false,
-                    true,
-                ],
-            ],
             'uuid' => [
                 'default' => '',
                 'required' => false,
@@ -98,6 +112,25 @@ class CameraParam
                 'default' => '',
                 'required' => false,
                 'value' => '',
+            ],
+            'streamform' => [
+                'default' => 'rtp',
+                'required' => false,
+                'value' => '',
+                'enum' => [
+                    'ps',
+                    'rtp',
+                ],
+            ],
+            'lockType' => [
+                'default' => 0,
+                'required' => false,
+                'value' => '',
+                'enum' => [
+                    0,
+                    1,
+                    2
+                ],
             ],
         ],
     ];
