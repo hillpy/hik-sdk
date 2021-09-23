@@ -1,15 +1,14 @@
 <?php
 
-namespace Hillpy\HikSDK\InfovisionIoT\Interfaces;
+namespace Hillpy\HikSDK\ISecureCenter\Interfaces;
 
 interface CameraInterface
 {
+    public function searchCamera();
     public function getCameras();
-    public function getCamerasBySpatialIndex();
     public function getCamerasByRegionIndexCode();
     public function getCamera();
-    public function modifyCamera();
-    public function getCamerasByRegionIndexCodes();
+    public function getCameraByTimeRange();
     public function getCameraPreviewURLs();
     public function getCameraPlaybackURLs();
 }

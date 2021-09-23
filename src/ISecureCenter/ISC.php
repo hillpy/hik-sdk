@@ -6,6 +6,7 @@ use Hillpy\HikSDK\BaseTrait;
 use Hillpy\HikSDK\CacheKey;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\AcpsInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\AuthInterface;
+use Hillpy\HikSDK\ISecureCenter\Interfaces\CameraInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\DoorInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\EventInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\FaceInterface;
@@ -15,6 +16,7 @@ use Hillpy\HikSDK\ISecureCenter\Interfaces\RegionInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\ResourceInterface;
 use Hillpy\HikSDK\ISecureCenter\Traits\AcpsTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\AuthTrait;
+use Hillpy\HikSDK\ISecureCenter\Traits\CameraTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\DoorTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\EventTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\FaceTrait;
@@ -28,6 +30,7 @@ use Hillpy\HikSDK\Libraries\Common\Common;
 class ISC implements
     AcpsInterface,
     AuthInterface,
+    CameraInterface,
     DoorInterface,
     EventInterface,
     FaceInterface,
@@ -38,6 +41,7 @@ class ISC implements
 {
     use AcpsTrait,
         AuthTrait,
+        CameraTrait,
         BaseTrait,
         DoorTrait,
         EventTrait,
