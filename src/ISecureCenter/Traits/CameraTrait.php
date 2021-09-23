@@ -70,4 +70,13 @@ trait CameraTrait
 
         return $this->handleRequest($urlPath, $finalParamArr);
     }
+
+    public function getCameraOnlineStatus($paramArr = [])
+    {
+        $finalParamArr = Common::handleParam(CameraParam::$camera[__FUNCTION__], $paramArr);
+
+        $urlPath = CameraConstant::COMMON_PATH . CameraConstant::GET_CAMERA_ONLINE_STATUS_PATH;
+
+        return $this->handleRequest($urlPath, $finalParamArr);
+    }
 }

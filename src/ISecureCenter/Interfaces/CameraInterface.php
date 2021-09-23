@@ -11,4 +11,5 @@ interface CameraInterface
     public function getCameraByTimeRange();
     public function getCameraPreviewURLs();
     public function getCameraPlaybackURLs();
+    public function getCameraOnlineStatus();
 }

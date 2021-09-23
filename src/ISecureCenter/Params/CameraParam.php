@@ -5,6 +5,11 @@ namespace Hillpy\HikSDK\ISecureCenter\Params;
 class CameraParam
 {
     public static $camera = [
+        'searchCamera' => [],
+        'getCameras' => [],
+        'getCamerasByRegionIndexCode' => [],
+        'getCamera' => [],
+        'getCameraByTimeRange' => [],
         'getCameraPreviewURLs' => [
             'cameraIndexCode' => [
                 'default' => '',
@@ -133,5 +138,6 @@ class CameraParam
                 ],
             ],
         ],
+        'getCameraOnlineStatus' => [],
     ];
 }
