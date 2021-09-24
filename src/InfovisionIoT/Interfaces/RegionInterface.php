@@ -2,7 +2,7 @@
 
 namespace Hillpy\HikSDK\InfovisionIoT\Interfaces;
 
-interface ResourceInterface
+interface RegionInterface
 {
     public function getAllTreeCode();
     public function getRegions();

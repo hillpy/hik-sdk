@@ -7,12 +7,12 @@ use Hillpy\HikSDK\CacheKey;
 use Hillpy\HikSDK\InfovisionIoT\Interfaces\AuthInterface;
 use Hillpy\HikSDK\InfovisionIoT\Interfaces\CameraInterface;
 use Hillpy\HikSDK\InfovisionIoT\Interfaces\FaceInterface;
-use Hillpy\HikSDK\InfovisionIoT\Interfaces\ResourceInterface;
+use Hillpy\HikSDK\InfovisionIoT\Interfaces\RegionInterface;
 use Hillpy\HikSDK\InfovisionIoT\Interfaces\VehicleInterface;
 use Hillpy\HikSDK\InfovisionIoT\Traits\AuthTrait;
 use Hillpy\HikSDK\InfovisionIoT\Traits\CameraTrait;
 use Hillpy\HikSDK\InfovisionIoT\Traits\FaceTrait;
-use Hillpy\HikSDK\InfovisionIoT\Traits\ResourceTrait;
+use Hillpy\HikSDK\InfovisionIoT\Traits\RegionTrait;
 use Hillpy\HikSDK\InfovisionIoT\Traits\VehicleTrait;
 use Hillpy\HikSDK\Libraries\Cache\Cache;
 use Hillpy\HikSDK\Libraries\Common\Common;
@@ -21,14 +21,14 @@ class IIOT implements
     AuthInterface,
     CameraInterface,
     FaceInterface,
-    ResourceInterface,
+    RegionInterface,
     VehicleInterface
 {
     use AuthTrait,
         BaseTrait,
         CameraTrait,
         FaceTrait,
-        ResourceTrait,
+        RegionTrait,
         VehicleTrait;
 
     // IIOT实例
