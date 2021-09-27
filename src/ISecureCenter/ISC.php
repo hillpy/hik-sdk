@@ -11,6 +11,7 @@ use Hillpy\HikSDK\ISecureCenter\Interfaces\DoorInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\EventInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\FaceInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\OrgInterface;
+use Hillpy\HikSDK\ISecureCenter\Interfaces\ParkInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\PersonInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\RegionInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\ResourceInterface;
@@ -21,6 +22,7 @@ use Hillpy\HikSDK\ISecureCenter\Traits\DoorTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\EventTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\FaceTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\OrgTrait;
+use Hillpy\HikSDK\ISecureCenter\Traits\ParkTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\PersonTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\RegionTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\ResourceTrait;
@@ -35,6 +37,7 @@ class ISC implements
     EventInterface,
     FaceInterface,
     OrgInterface,
+    ParkInterface,
     PersonInterface,
     RegionInterface,
     ResourceInterface
@@ -47,6 +50,7 @@ class ISC implements
         EventTrait,
         FaceTrait,
         OrgTrait,
+        ParkTrait,
         PersonTrait,
         RegionTrait,
         ResourceTrait;
