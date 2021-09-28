@@ -16,4 +16,13 @@ trait ParkTrait
 
         return $this->handleRequest($urlPath, $finalParamArr);
     }
+
+    public function getCrossImage($paramArr = [])
+    {
+        $finalParamArr = Common::handleParam(ParkParam::$park[__FUNCTION__], $paramArr);
+
+        $urlPath = ParkConstant::COMMON_PATH . ParkConstant::GET_CROSS_IMAGE_PATH;
+
+        return $this->handleRequest($urlPath, $finalParamArr);
+    }
 }
