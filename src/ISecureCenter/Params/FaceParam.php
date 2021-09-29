@@ -48,5 +48,6 @@ class FaceParam
                 'value' => '',
             ],
         ],
+        'getFaceCapture' => [],
     ];
 }

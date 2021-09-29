@@ -7,4 +7,5 @@ interface FaceInterface
     public function addSingleFace();
     public function updateSingleFace();
     public function deleteSingleFace();
+    public function getFaceCapture();
 }

@@ -43,4 +43,13 @@ trait FaceTrait
 
         return $this->handleRequest($urlPath, $finalParamArr);
     }
+
+    public function getFaceCapture($paramArr = [])
+    {
+        $finalParamArr = Common::handleParam(FaceParam::$face[__FUNCTION__], $paramArr);
+
+        $urlPath = FaceConstant::COMMON_PATH . FaceConstant::GET_FACE_CAPTURE_PATH;
+
+        return $this->handleRequest($urlPath, $finalParamArr);
+    }
 }
