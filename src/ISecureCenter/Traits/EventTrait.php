@@ -26,11 +26,11 @@ trait EventTrait
         return $this->handleRequest($urlPath, $finalParamArr);
     }
 
-    public function getUnsubscribeEvent($paramArr = [])
+    public function unsubscribeEventByEventType($paramArr = [])
     {
         $finalParamArr = Common::handleParam(EventParam::$event[__FUNCTION__], $paramArr);
 
-        $urlPath = EventConstant::COMMON_PATH . EventConstant::GET_UNSUBSCRIBE_EVENT_PATH;
+        $urlPath = EventConstant::COMMON_PATH . EventConstant::UNSUBSCRIBE_EVENT_BY_EVENT_TYPE_PATH;
 
         return $this->handleRequest($urlPath, $finalParamArr);
     }

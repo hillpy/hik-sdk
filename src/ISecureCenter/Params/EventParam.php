@@ -33,7 +33,7 @@ class EventParam
             ],
         ],
         'getSubscribeEvent' => [],
-        'getUnsubscribeEvent' => [
+        'unsubscribeEventByEventType' => [
             'eventTypes' => [
                 'default' => '',
                 'required' => true,
