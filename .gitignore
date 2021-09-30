@@ -11,3 +11,4 @@ HikSDKCache
 Env.php
 cghooks.lock
 test.*
+go.mod
