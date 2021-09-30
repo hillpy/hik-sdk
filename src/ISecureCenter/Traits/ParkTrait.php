@@ -25,4 +25,13 @@ trait ParkTrait
 
         return $this->handleRequest($urlPath, $finalParamArr);
     }
+
+    public function getParkList($paramArr = [])
+    {
+        $finalParamArr = Common::handleParam(ParkParam::$park[__FUNCTION__], $paramArr);
+
+        $urlPath = ParkConstant::COMMON_PATH . ParkConstant::GET_PARK_LIST_PATH;
+
+        return $this->handleRequest($urlPath, $finalParamArr);
+    }
 }

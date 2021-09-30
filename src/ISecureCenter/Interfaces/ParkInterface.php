@@ -6,4 +6,5 @@ interface ParkInterface
 {
     public function getCrossRecords();
     public function getCrossImage();
+    public function getParkList();
 }

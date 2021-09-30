@@ -7,5 +7,6 @@ class ParkParam
     public static $park = [
         'getCrossRecords' => [],
         'getCrossImage' => [],
+        'getParkList' => [],
     ];
 }
