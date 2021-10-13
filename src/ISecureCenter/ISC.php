@@ -15,6 +15,7 @@ use Hillpy\HikSDK\ISecureCenter\Interfaces\ParkInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\PersonInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\RegionInterface;
 use Hillpy\HikSDK\ISecureCenter\Interfaces\ResourceInterface;
+use Hillpy\HikSDK\ISecureCenter\Interfaces\VehicleInterface;
 use Hillpy\HikSDK\ISecureCenter\Traits\AcpsTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\AuthTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\CameraTrait;
@@ -26,6 +27,7 @@ use Hillpy\HikSDK\ISecureCenter\Traits\ParkTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\PersonTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\RegionTrait;
 use Hillpy\HikSDK\ISecureCenter\Traits\ResourceTrait;
+use Hillpy\HikSDK\ISecureCenter\Traits\VehicleTrait;
 use Hillpy\HikSDK\Libraries\Cache\Cache;
 use Hillpy\HikSDK\Libraries\Common\Common;
 
@@ -40,7 +42,8 @@ class ISC implements
     ParkInterface,
     PersonInterface,
     RegionInterface,
-    ResourceInterface
+    ResourceInterface,
+    VehicleInterface
 {
     use AcpsTrait,
         AuthTrait,
@@ -53,7 +56,8 @@ class ISC implements
         ParkTrait,
         PersonTrait,
         RegionTrait,
-        ResourceTrait;
+        ResourceTrait,
+        VehicleTrait;
 
     // ISC实例
     private static $instance;

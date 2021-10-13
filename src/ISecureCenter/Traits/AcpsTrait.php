@@ -147,7 +147,7 @@ trait AcpsTrait
     {
         $finalParamArr = Common::handleParam(AcpsParam::$acps[__FUNCTION__], $paramArr);
 
-        $urlPath = AcpsConstant::COMMON_PATH . AcpsConstant::GEt_AUTH_DOWNLOAD_TASK_PATH;
+        $urlPath = AcpsConstant::COMMON_PATH . AcpsConstant::GET_AUTH_DOWNLOAD_TASK_PATH;
 
         return $this->handleRequest($urlPath, $finalParamArr);
     }

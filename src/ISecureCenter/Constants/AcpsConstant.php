@@ -19,7 +19,7 @@ class AcpsConstant extends BaseConstant
     const GET_AUTH_DOWNLOAD_TASK_LIST_PATH = '/api/acps/v1/authDownload/task/list';
     const DELETE_AUTH_DOWNLOAD_TASK_PATH = '/api/acps/v1/authDownload/task/deletion';
     const STOP_AUTH_DOWNLOAD_TASK_PATH = '/api/acps/v1/authDownload/task/stop';
-    const GEt_AUTH_DOWNLOAD_TASK_PATH = '/api/acps/v1/authDownload/task/search';
+    const GET_AUTH_DOWNLOAD_TASK_PATH = '/api/acps/v1/authDownload/task/search';
     const GET_CHANNEL_DOWNLOAD_RECORD_LIST_PATH = '/api/acps/v1/download_record/channel/list/search';
     const GET_CHANNEL_DOWNLOAD_RECORD_TOTAL_PATH = '/api/acps/v1/download_record/channel/total/search';
     const GET_DOWNLOAD_RECORD_PERSON_DETAIL_PATH = '/api/acps/v2/download_record/person/detail/search';
