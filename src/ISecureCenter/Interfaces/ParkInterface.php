@@ -13,6 +13,9 @@ interface ParkInterface
     public function getCrossImage();
     public function controlPmsDevice();
     public function controlBatchPmsDevice();
+    public function chargeCar();
+    public function deleteChargeCar();
+    public function getChargeCar();
     public function getRemainParkingSpaceNum();
     public function getParkingSpaceInfo();
     public function bindParkingSpaceToCar();

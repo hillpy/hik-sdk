@@ -89,6 +89,33 @@ trait ParkTrait
         return $this->handleRequest($urlPath, $finalParamArr);
     }
 
+    public function chargeCar($paramArr = [])
+    {
+        $finalParamArr = Common::handleParam(ParkParam::$park[__FUNCTION__], $paramArr);
+
+        $urlPath = ParkConstant::COMMON_PATH . ParkConstant::CHARGE_CAR_PATH;
+
+        return $this->handleRequest($urlPath, $finalParamArr);
+    }
+
+    public function deleteChargeCar($paramArr = [])
+    {
+        $finalParamArr = Common::handleParam(ParkParam::$park[__FUNCTION__], $paramArr);
+
+        $urlPath = ParkConstant::COMMON_PATH . ParkConstant::DELETE_CHARGE_CAR_PATH;
+
+        return $this->handleRequest($urlPath, $finalParamArr);
+    }
+
+    public function getChargeCar($paramArr = [])
+    {
+        $finalParamArr = Common::handleParam(ParkParam::$park[__FUNCTION__], $paramArr);
+
+        $urlPath = ParkConstant::COMMON_PATH . ParkConstant::GET_CHARGE_CAR_PATH;
+
+        return $this->handleRequest($urlPath, $finalParamArr);
+    }
+
     public function getRemainParkingSpaceNum($paramArr = [])
     {
         $finalParamArr = Common::handleParam(ParkParam::$park[__FUNCTION__], $paramArr);

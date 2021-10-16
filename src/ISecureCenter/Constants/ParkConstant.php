@@ -13,6 +13,9 @@ class ParkConstant extends BaseConstant
     const GET_CROSS_IMAGE_PATH = '/api/pms/v1/image';
     const CONTROL_PMS_DEVICE_PATH = '/api/pms/v1/deviceControl';
     const CONTROL_BATCH_PMS_DEVICE_PATH = '/api/pms/v1/deviceControlBatch';
+    const CHARGE_CAR_PATH = '/api/pms/v1/car/charge';
+    const DELETE_CHARGE_CAR_PATH = '/api/pms/v1/car/charge/deletion';
+    const GET_CHARGE_CAR_PATH = '/api/pms/v1/car/charge/page';
     const GET_REMAIN_PARKING_SPACE_NUM_PATH = '/api/pms/v1/park/remainSpaceNum';
     const GET_PARKING_SPACE_INFO_PATH = '/api/pms/v1/parkingSpace/spaceNo';
     const BIND_PARKING_SPACE_TO_CAR_PATH = '/api/pms/v1/parking_space/car_bind/add';
