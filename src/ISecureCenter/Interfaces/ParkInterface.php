@@ -4,6 +4,9 @@ namespace Hillpy\HikSDK\ISecureCenter\Interfaces;
 
 interface ParkInterface
 {
+    public function reserveParkingSpace();
+    public function getReservationRecord();
+    public function deleteReservationParkingSpace();
     public function getCarInRecords();
     public function getParkingRecord();
     public function getCrossRecords();

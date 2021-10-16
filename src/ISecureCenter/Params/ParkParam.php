@@ -5,6 +5,9 @@ namespace Hillpy\HikSDK\ISecureCenter\Params;
 class ParkParam
 {
     public static $park = [
+        'reserveParkingSpace' => [],
+        'getReservationRecord' => [],
+        'deleteReservationParkingSpace' => [],
         'getCarInRecords' => [],
         'getParkingRecord' => [],
         'getCrossRecords' => [],

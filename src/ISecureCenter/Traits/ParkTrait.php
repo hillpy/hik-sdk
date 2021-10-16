@@ -8,6 +8,33 @@ use Hillpy\HikSDK\ISecureCenter\Params\ParkParam;
 
 trait ParkTrait
 {
+    public function reserveParkingSpace($paramArr = [])
+    {
+        $finalParamArr = Common::handleParam(ParkParam::$park[__FUNCTION__], $paramArr);
+
+        $urlPath = ParkConstant::COMMON_PATH . ParkConstant::RESERVE_PARKING_SPACE_PATH;
+
+        return $this->handleRequest($urlPath, $finalParamArr);
+    }
+
+    public function getReservationRecord($paramArr = [])
+    {
+        $finalParamArr = Common::handleParam(ParkParam::$park[__FUNCTION__], $paramArr);
+
+        $urlPath = ParkConstant::COMMON_PATH . ParkConstant::GET_RESERVATION_RECORD_PATH;
+
+        return $this->handleRequest($urlPath, $finalParamArr);
+    }
+
+    public function deleteReservationParkingSpace($paramArr = [])
+    {
+        $finalParamArr = Common::handleParam(ParkParam::$park[__FUNCTION__], $paramArr);
+
+        $urlPath = ParkConstant::COMMON_PATH . ParkConstant::DELETE_RESERVATION_PARKING_SPACE_PATH;
+
+        return $this->handleRequest($urlPath, $finalParamArr);
+    }
+
     public function getCarInRecords($paramArr = [])
     {
         $finalParamArr = Common::handleParam(ParkParam::$park[__FUNCTION__], $paramArr);

@@ -4,6 +4,9 @@ namespace Hillpy\HikSDK\ISecureCenter\Constants;
 
 class ParkConstant extends BaseConstant
 {
+    const RESERVE_PARKING_SPACE_PATH = '/api/pms/v2/parkingSpace/reservations/addition';
+    const GET_RESERVATION_RECORD_PATH = '/api/pms/v2/reserveRecord/page';
+    const DELETE_RESERVATION_PARKING_SPACE_PATH = '/api/pms/v1/parkingSpace/reservations/deletion';
     const GET_CAR_IN_RECORDS_PATH = '/api/pms/v1/tempCarInRecords/page';
     const GET_PARKING_RECORD_PATH = '/api/pms/v1/parkingRecord/query';
     const GET_CROSS_RECORDS_PATH = '/api/pms/v1/crossRecords/page';
