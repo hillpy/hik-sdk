@@ -4,6 +4,7 @@ namespace Hillpy\HikSDK\ISecureCenter\Constants;
 
 class PersonConstant extends BaseConstant
 {
+    const ADD_SINGLE_PERSON_V1_PATH = '/api/resource/v1/person/single/add';
     const ADD_SINGLE_PERSON_PATH = '/api/resource/v2/person/single/add';
     const ADD_BATCH_PERSON_PATH = '/api/resource/v1/person/batch/add';
     const UPDATE_SINGLE_PERSON_PATH = '/api/resource/v1/person/single/update';

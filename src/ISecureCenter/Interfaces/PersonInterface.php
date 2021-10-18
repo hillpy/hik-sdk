@@ -4,6 +4,7 @@ namespace Hillpy\HikSDK\ISecureCenter\Interfaces;
 
 interface PersonInterface
 {
+    public function addSinglePersonV1();
     public function addSinglePerson();
     public function addBatchPerson();
     public function updateSinglePerson();

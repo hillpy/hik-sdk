@@ -8,6 +8,15 @@ use Hillpy\HikSDK\ISecureCenter\Params\PersonParam;
 
 trait PersonTrait
 {
+    public function addSinglePersonV1($paramArr = [])
+    {
+        $finalParamArr = Common::handleParam(PersonParam::$person[__FUNCTION__], $paramArr);
+
+        $urlPath = PersonConstant::COMMON_PATH . PersonConstant::ADD_SINGLE_PERSON_V1_PATH;
+
+        return $this->handleRequest($urlPath, $finalParamArr);
+    }
+
     public function addSinglePerson($paramArr = [])
     {
         $finalParamArr = Common::handleParam(PersonParam::$person[__FUNCTION__], $paramArr);
