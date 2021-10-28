@@ -52,6 +52,7 @@ class FaceParam
         'addPersonLibRegionControl' => [],
         'modifyPersonLibRegionControl' => [],
         'getFaceAlarmRecordsWithPage' => [],
+        'getFaceAlarmRecordsWithPageV1' => [],
         'getPersonControlsDetailsWithPage' => [],
     ];
 }

@@ -432,6 +432,15 @@ trait FaceTrait
         return $this->handleRequest($urlPath, $finalParamArr);
     }
 
+    public function getFaceAlarmRecordsWithPageV1($paramArr = [])
+    {
+        $finalParamArr = Common::handleParam(FaceParam::$face[__FUNCTION__], $paramArr);
+
+        $urlPath = FaceConstant::COMMON_PATH . FaceConstant::GET_FACE_ALARM_RECORDS_WITH_PAGE_V1_PATH;
+
+        return $this->handleRequest($urlPath, $finalParamArr);
+    }
+
     public function getPersonControlsDetailsWithPage($paramArr = [])
     {
         $finalParamArr = Common::handleParam(FaceParam::$face[__FUNCTION__], $paramArr);

@@ -51,5 +51,6 @@ class FaceConstant extends BaseConstant
     const ADD_PERSON_LIB_REGION_CONTROL_PATH = '/api/aiapplication/v3/face/addPersonLibRegionControl';
     const MODIFY_PERSON_LIB_REGION_CONTROL_PATH = '/api/aiapplication/v3/face/modifyPersonLibRegionControl';
     const GET_FACE_ALARM_RECORDS_WITH_PAGE_PATH = '/api/aiapplication/v3/face/queryFaceAlarmRecordsWithPage';
+    const GET_FACE_ALARM_RECORDS_WITH_PAGE_V1_PATH = '/api/aiapplication/v1/face/queryAlarmRecordsWithPage';
     const GET_PERSON_CONTROLS_DETAILS_WITH_PAGE_PATH = '/api/aiapplication/v1/face/getPersonControlsDetailsWithPage';
 }

@@ -51,5 +51,6 @@ interface FaceInterface
     public function addPersonLibRegionControl();
     public function modifyPersonLibRegionControl();
     public function getFaceAlarmRecordsWithPage();
+    public function getFaceAlarmRecordsWithPageV1();
     public function getPersonControlsDetailsWithPage();
 }
