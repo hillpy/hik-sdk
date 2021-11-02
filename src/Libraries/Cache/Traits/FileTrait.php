@@ -207,7 +207,7 @@ trait FileTrait
 
     private static function writeFile($filename, $content)
     {
-        return file_put_contents($filename, $content);
+        return file_put_contents($filename, $content, LOCK_EX);
     }
 
     private static function readFile($filename)
