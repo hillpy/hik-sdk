@@ -83,7 +83,7 @@ trait FileTrait
         } else {
             $content = self::readFile($allPath . '/' . $filename);
         }
-        $value = self::parseContent($content, $allPath . '/' . $filename);
+        $value = $content ? self::parseContent($content, $allPath . '/' . $filename) : '';
 
         return $value;
     }
