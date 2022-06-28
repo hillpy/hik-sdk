@@ -2,6 +2,7 @@
 
 namespace Hillpy\HikSDK\Tests;
 
+use Hillpy\HikSDK\InfovisionForesight\IFORE;
 use Hillpy\HikSDK\InfovisionIoT\IIOT;
 use Hillpy\HikSDK\ISecureCenter\ISC;
 use Hillpy\HikSDK\Libraries\Cache\Cache;
@@ -30,6 +31,18 @@ trait BaseTrait
         ];
 
         return IIOT::getInstance($options);
+    }
+
+    public function getIFOREInstance()
+    {
+        $options = [
+            'host' => Env::$IFORE['host'],
+            'app_key' => Env::$IFORE['app_key'],
+            'app_secret' => Env::$IFORE['app_secret'],
+            'cache_driver' => 'file',
+        ];
+
+        return IFORE::getInstance($options);
     }
 
     public function getCacheInstance()

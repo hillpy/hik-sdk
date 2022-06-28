@@ -15,4 +15,10 @@ class Env
         'app_key' => '',
         'app_secret' => '',
     ];
+
+    public static $IFORE = [
+        'host' => '',
+        'app_key' => '',
+        'app_secret' => '',
+    ];
 }
